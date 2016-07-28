@@ -50,6 +50,8 @@
   ],
   "dependencies": {
     "broccoli-caching-writer": "^0.5.5",
+    "broccoli-funnel": "^1.0.3",
+    "broccoli-merge-trees": "^1.1.2",
     "chalk": "^1.0.0",
     "deep-merge": "^1.0.0",
     "ember-cli-babel": "^5.1.6",

@@ -51,6 +51,7 @@
   "dependencies": {
     "broccoli-caching-writer": "^0.5.5",
     "chalk": "^1.0.0",
+    "deep-merge": "^1.0.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-htmlbars": "0.7.7",
     "ember-data-fixture-adapter": "^1.0.0",

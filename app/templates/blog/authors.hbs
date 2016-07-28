@@ -1,5 +1,5 @@
 <ul>
-  {{#each author in model}}
+  {{#each model as |author|}}
     <li>
       {{#link-to 'blog.author' author.urlString}}
         {{capitalize-string author.name}}

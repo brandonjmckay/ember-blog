@@ -4,7 +4,6 @@
 
 <nav role="navigation">
   <ul>
-
     <li>
       {{#link-to 'blog'}}
         Latest
@@ -25,7 +24,7 @@
 
     {{!-- You can display categories and authors too
 
-    {{#each category in categories}}
+    {{#each categories as |category|}}
       <li>
         {{#link-to 'blog.category' category.urlString}}
           {{capitalize-string category.name}}
@@ -33,7 +32,7 @@
       </li>
     {{/each}}
 
-    {{#each author in authors}}
+    {{#each authors as |author|}}
       <li>
         {{#link-to 'blog.author' author.urlString}}
           {{capitalize-string author.name}}
@@ -43,5 +42,3 @@
 
   </ul>
 </nav>
-
-

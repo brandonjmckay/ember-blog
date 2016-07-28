@@ -1,5 +1,5 @@
 <ul>
-  {{#each category in model}}
+  {{#each model as |category|}}
     <li>
       {{#link-to 'blog.category' category.urlString}}
         {{capitalize-string category.name}}

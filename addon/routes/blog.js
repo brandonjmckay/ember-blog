@@ -1,15 +1,16 @@
 import Ember from 'ember';
+const { Route } = Ember;
 
-export default Ember.Route.extend({
+export default Route.extend({
+  setupController(controller) {
+    const authors = this.store.find('author');
+    const categories = this.store.find('category');
 
-  setupController: function(controller, model) {
-    var authors = this.store.find('author');
-    var categories = this.store.find('category');
+    this._super(...arguments);
 
-    this._super(controller, model);
-
-    controller.set('authors', authors);
-    controller.set('categories', categories);
-  },
-
+    controller.setProperties({
+      authors,
+      categories
+    });
+  }
 });

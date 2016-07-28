@@ -1,18 +1,17 @@
 import Ember from 'ember';
+const { Route } = Ember;
 
-export default Ember.Route.extend({
-
-  model: function(params) {
+export default Route.extend({
+  model(params) {
     return this.store.find('author', { urlString: params.urlString });
   },
 
-  setupController: function(controller, model) {
-    var author = model.get('content.firstObject');
+  setupController(controller, model) {
+    const author = model.get('content.firstObject');
 
     controller.setProperties({
-      author: author,
+      author,
       model: author.get('posts')
     });
-  },
-
+  }
 });

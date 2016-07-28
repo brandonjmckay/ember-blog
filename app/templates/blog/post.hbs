@@ -1,19 +1,16 @@
-{{#with model as |post|}}
-  <header class="header">
+<header class="header">
 
-    <h1 {{bind-attr class='mf.postTitle'}}>{{post.title}}</h1>
+  <h1 class={{mf.postTitle}}>{{model.title}}</h1>
 
-    {{partial 'blog/post-partials/published-date'}}
-    {{partial 'blog/post-partials/tags'}}
+  {{partial 'blog/post-partials/published-date'}}
+  {{partial 'blog/post-partials/tags'}}
 
-  </header>
+</header>
 
-  <hr>
+<hr>
 
-  <div {{bind-attr class='mf.postContent'}}>
-    {{partial post.urlString}}
-  </div>
+<div class={{mf.postContent}}>
+  {{partial model.urlString}}
+</div>
 
-  <hr>
-
-{{/with}}
+<hr>

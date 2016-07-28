@@ -1,5 +1,5 @@
 <ul class="tags">
-  {{#each category in post.categories}}
+  {{#each post.categories as |category|}}
     <li>
       {{#link-to 'blog.category' category.urlString}}
         {{capitalize-string category.name}}

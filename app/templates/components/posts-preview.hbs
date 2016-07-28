@@ -1,0 +1,19 @@
+<article class={{mf.postPreview}}>
+
+  <h2 class={{mf.postTitle}}>
+    {{#link-to 'blog.post' post.urlString classNames='u-url'}}
+      {{post.title}}
+    {{/link-to}}
+  </h2>
+
+  {{posts-published-date}}
+
+  <p class={{mf.postDescription}}>
+    {{post.description}}
+  </p>
+
+  {{posts-tags}}
+
+  {{!-- TODO - comment count only works on firts page load --}}
+  {{!-- {{partial 'partials/comment_count'}} --}}
+</article>

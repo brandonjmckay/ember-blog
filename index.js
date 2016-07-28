@@ -4,7 +4,7 @@
 
 /* Dependencies */
 
-var mergeObjects = require('deepmerge');
+var mergeObjects = require('deep-merge');
 var Funnel = require('broccoli-funnel');
 var mergeTrees = require('broccoli-merge-trees');
 

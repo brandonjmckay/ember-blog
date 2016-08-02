@@ -2,15 +2,15 @@
 
   <h1 class={{mf.postTitle}}>{{model.title}}</h1>
 
-  {{partial 'blog/post-partials/published-date'}}
-  {{partial 'blog/post-partials/tags'}}
+  {{posts-published-date post=model}}
+  {{posts-tags post=model}}
 
 </header>
 
 <hr>
 
 <div class={{mf.postContent}}>
-  {{partial model.urlString}}
+  {{component model.urlString}}
 </div>
 
 <hr>
